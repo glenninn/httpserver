@@ -1,0 +1,23 @@
+{
+  "name": "httpsserver",
+  "version": "1.0.0",
+  "description": "Node application to server over HTTPS and HTTP",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glenninn/httpsserver.git"
+  },
+  "author": "glenninn@yahoo.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glenninn/httpsserver/issues"
+  },
+  "homepage": "https://github.com/glenninn/httpsserver#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
