@@ -1,8 +1,10 @@
 var https = require('https');
 var fs = require("fs");
 var express = require('express');
+var path = require('path');
 var app = express();
 
+var ourPath = path.dirname( process.argv[1] );
 var htmlDir = process.argv[2] || "html";
 var port = 80;
 var secPort = process.argv[3] || 443;
@@ -25,8 +27,8 @@ console.log("\n");
 
 
 var sslOptions = {
-    cert: fs.readFileSync("certs/server.crt"),
-    key: fs.readFileSync("certs/server.pem")
+    cert: fs.readFileSync(ourPath + "/certs/server.crt"),
+    key: fs.readFileSync(ourPath + "/certs/server.pem")
 };
 var httpsServer = https.createServer(sslOptions, app);
 
